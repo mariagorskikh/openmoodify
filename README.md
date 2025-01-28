@@ -4,15 +4,15 @@ Moodify is a web-based application that transforms YouTube videos into customize
 
 Features
 
-Paste YouTube links and choose from 10 unique vibes using emojis.
-Real-time audio processing with visual feedback and loading animations.
-Download or play the transformed audio directly in the browser.
+🎵 Paste YouTube links and choose from 10 unique vibes using emojis.
+⚙️ Real-time audio processing with visual feedback and loading animations.
+💾 Download or play the transformed audio directly in the browser.
 Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
 Python 3.8+
-Node.js 14+ (for optional static file serving)
+Node.js 14+ (optional for static file serving)
 pip (Python package manager)
 FFmpeg (for audio processing)
 Installation
@@ -24,8 +24,6 @@ Edit
 git clone https://github.com/mariagorskikh/moodify.git
 cd moodify
 2. Install Python Dependencies
-Install the necessary Python libraries:
-
 bash
 Copy
 Edit
@@ -41,7 +39,7 @@ Edit
 brew install ffmpeg  # macOS (using Homebrew)
 sudo apt install ffmpeg  # Ubuntu/Linux
 4. Optional: Install Node.js Dependencies
-If you want to serve the frontend files using a Node.js server:
+If you want to serve the frontend files using Node.js:
 
 bash
 Copy
@@ -77,16 +75,13 @@ The backend will be available at http://localhost:5005.
 
 2. Open the Frontend
 Option 1: Open the index.html file directly in your browser:
-
 Navigate to the project folder and double-click index.html.
 Option 2: Serve the frontend using a static server (Node.js):
-
 bash
 Copy
 Edit
 npx http-server . -p 8080
 Visit http://localhost:8080 in your browser.
-
 How to Use
 
 Paste a YouTube link into the input box.
@@ -95,7 +90,7 @@ Press Enter or wait for the audio to process.
 Play the audio, download it, or try another vibe.
 API Endpoints
 
-/api/transform
+1. /api/transform
 Method: POST
 Payload:
 json
@@ -106,7 +101,7 @@ Edit
     "effect_type": "vibe type (e.g., 'slow_reverb')"
 }
 Response: Transformed audio file (MP3 format).
-/api/health
+2. /api/health
 Method: GET
 Response:
 json
@@ -159,4 +154,3 @@ Acknowledgements
 yt-dlp for YouTube downloading.
 FFmpeg for audio processing.
 Flask for the backend framework.
-
